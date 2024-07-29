@@ -8,6 +8,7 @@ const html = document.documentElement;
 const lightImages = '.popup:not(.dark)';
 const darkImages = '.popup:not(.light)';
 let selector = lightImages;
+let lightbox = GLightbox({ selector: `${selector}` });
 
 if (
   (html.hasAttribute('data-mode') &&
@@ -17,8 +18,6 @@ if (
 ) {
   selector = darkImages;
 }
-
-let lightbox = GLightbox({ selector: `${selector}` });
 
 function updateImages(event) {
   if (
@@ -39,9 +38,13 @@ function updateImages(event) {
 
 export function imgPopup() {
   if (document.querySelector(`${selector}`) === null) {
+  if (document.querySelector(`${selector}`) === null) {
     return;
   }
 
+  if (document.getElementById('mode-toggle')) {
+    window.addEventListener('message', updateImages);
+  }
   if (document.getElementById('mode-toggle')) {
     window.addEventListener('message', updateImages);
   }
