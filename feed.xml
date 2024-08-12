@@ -1,0 +1,261 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/about-me/</id>
+  <title>Davide Fissore</title>
+  <subtitle>FissoreD</subtitle>
+  <updated>2024-08-13T00:03:38+02:00</updated>
+  <author>
+    <name>Davide Fissore</name>
+    <uri>/about-me/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/about-me/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="/about-me/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
+  <rights> © 2024 Davide Fissore </rights>
+  <icon>/about-me/assets/img/favicons/favicon.ico</icon>
+  <logo>/about-me/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>My scripts</title>
+    <link href="/about-me/posts/scripts/" rel="alternate" type="text/html" title="My scripts" />
+    <published>2024-08-12T15:24:55+02:00</published>
+  
+    <updated>2024-08-12T15:24:55+02:00</updated>
+  
+    <id>/about-me/posts/scripts/</id>
+    <content src="/about-me/posts/scripts/" />
+    <author>
+      <name>Davide Fissore</name>
+    </author>
+
+  
+    
+  
+
+  <summary>Remove tags from mp3 file
+
+pip install music-tag
+
+from mutagen.mp3 import MP3
+mp3 = MP3(FILE_NAME)
+mp3.delete()
+mp3.save()
+
+
+A more complete example can be found here
+
+Battery alert
+
+To preserve the battery of the computer, it is useful to keep the battery level
+between about $20\%$ and $85\%$. I have implemented a small script written in
+bash language notifying at regular intervals if the batt...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Ocaml</title>
+    <link href="/about-me/posts/ocaml/" rel="alternate" type="text/html" title="Ocaml" />
+    <published>2024-08-12T15:24:55+02:00</published>
+  
+    <updated>2024-08-12T15:24:55+02:00</updated>
+  
+    <id>/about-me/posts/ocaml/</id>
+    <content src="/about-me/posts/ocaml/" />
+    <author>
+      <name>Davide Fissore</name>
+    </author>
+
+  
+    
+  
+
+  <summary>perf: profile ocaml performance
+
+
+  
+    
+      Description
+      Command
+    
+  
+  
+    
+      Profile file
+      sudo perf record --call-graph lbr -- OCAML_BIN
+    
+    
+      Profile with name
+      sudo perf record --call-graph lbr -o perf.data.old -- OCAML_BIN
+    
+    
+      Compare perf files
+      sudo perf diff perf.data.old perf.data
+    
+  
+
+
+Opam
+
+Main commands
+
+
+  
+    
+      Descr...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Linux</title>
+    <link href="/about-me/posts/linux/" rel="alternate" type="text/html" title="Linux" />
+    <published>2024-08-12T15:24:55+02:00</published>
+  
+    <updated>2024-08-12T15:24:55+02:00</updated>
+  
+    <id>/about-me/posts/linux/</id>
+    <content src="/about-me/posts/linux/" />
+    <author>
+      <name>Davide Fissore</name>
+    </author>
+
+  
+    
+  
+
+  <summary>Useful commands
+
+
+  
+    
+      Description
+      Command
+    
+  
+  
+    
+      Restart gnome shell
+      ALT + F2, then r
+    
+    
+      Force kill process
+      kill -9 PID
+    
+    
+      Switch virtual console
+      CTRL + ALT + F1
+    
+    
+      Install deb
+      dpkg -i DEB_FILE
+    
+    
+      Regex replace
+      echo ... \| sed &amp;#39;s/IN_REX/OUT_REX/&amp;#39;
+    
+  
+
+
+Hints on makefile
+
+# Create...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Latex</title>
+    <link href="/about-me/posts/latex/" rel="alternate" type="text/html" title="Latex" />
+    <published>2024-08-12T15:24:55+02:00</published>
+  
+    <updated>2024-08-12T15:24:55+02:00</updated>
+  
+    <id>/about-me/posts/latex/</id>
+    <content src="/about-me/posts/latex/" />
+    <author>
+      <name>Davide Fissore</name>
+    </author>
+
+  
+    
+  
+
+  <summary>A latex report template is here : link
+
+A latex presentation template is here : link
+
+Graphics and images
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.25\textwidth}
+    \includegraphics[width=\textwidth]{YOUR IMAGE PATH}
+    \caption{Caption 1}
+    \label{fig:Label1}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.25\textwidth}
+    \includegraphics[width=\textwidth]{YOUR IMAGE PATH}
+  ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Git &amp; Github</title>
+    <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
+    <published>2024-08-12T15:24:55+02:00</published>
+  
+    <updated>2024-08-12T15:24:55+02:00</updated>
+  
+    <id>/about-me/posts/github/</id>
+    <content src="/about-me/posts/github/" />
+    <author>
+      <name>Davide Fissore</name>
+    </author>
+
+  
+    
+  
+
+  <summary>Main commands
+
+
+  
+    
+      Description
+      Command
+    
+  
+  
+    
+      Clean brute force
+      git clean -dfx
+    
+    
+      All branch names
+      git show-ref
+    
+    
+      Add worktree
+      git worktree add PATH EXISTING_BRANCH
+    
+    
+      Add worktree new branch
+      git worktree add -b NEW_BRANCH_NAME PATH
+    
+    
+      Fetch all
+      git fetch --all
+    
+    
+      Show...</summary>
+
+  </entry>
+
+</feed>
+
+

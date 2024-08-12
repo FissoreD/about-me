@@ -1,20 +1,106 @@
----
-layout: compress
-swcache: true
----
-
 [
-  {% for post in site.posts %}
+  
   {
-    "title": {{ post.title | jsonify }},
-    "url": {{ post.url | relative_url | jsonify }},
-    "categories": {{ post.categories | join: ', ' | jsonify }},
-    "tags": {{ post.tags | join: ', ' | jsonify }},
-    "date": "{{ post.date }}",
-    {% include no-linenos.html content=post.content %}
-    {% assign _content = content | strip_html | strip_newlines %}
-    "snippet": {{ _content | truncate: 200 | jsonify }},
-    "content": {{ _content | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
+    "title": "My scripts",
+    "url": "/about-me/posts/scripts/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-08-12 15:24:55 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "Remove tags from mp3 filepip install music-tagfrom mutagen.mp3 import MP3mp3 = MP3(FILE_NAME)mp3.delete()mp3.save()A more complete example can be found hereBattery alertTo preserve the battery of t...",
+    "content": "Remove tags from mp3 filepip install music-tagfrom mutagen.mp3 import MP3mp3 = MP3(FILE_NAME)mp3.delete()mp3.save()A more complete example can be found hereBattery alertTo preserve the battery of the computer, it is useful to keep the battery levelbetween about $20\\%$ and $85\\%$. I have implemented a small script written inbash language notifying at regular intervals if the battery goes below or abovethese two bounds.  Script with battery alert is hereIf you want to modify the bounds or the interval of notifications, it issufficient to modify the values of the three variables MAX_BATTERY,MIN_BATTERY and SLEEP_TIME.To launch this script after the boot of the system, make the script executablewith chmod u+x and then add its path in the list of startup applications.  The path of to the script should be absolute and you should use /home/$USERinstead of the ~ symbol."
+  },
+  
+  {
+    "title": "Ocaml",
+    "url": "/about-me/posts/ocaml/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-08-12 15:24:55 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "perf: profile ocaml performance            Description      Command                  Profile file      sudo perf record --call-graph lbr -- OCAML_BIN              Profile with name      sudo perf r...",
+    "content": "perf: profile ocaml performance            Description      Command                  Profile file      sudo perf record --call-graph lbr -- OCAML_BIN              Profile with name      sudo perf record --call-graph lbr -o perf.data.old -- OCAML_BIN              Compare perf files      sudo perf diff perf.data.old perf.data      OpamMain commands            Description      Command                  Create global switch      opam switch create SWITCH_NAME 4.14.1              Create local switch      opam switch create . 4.14.1              Remove switch      opam switch remove SWITCH_NAME              Export switch      opam switch export FILE_EXPORT.txt --switch SWITCH_NAME              Import switch      opam switch import FILE_EXPORT.txt --switch SWITCH_NAME              Install only deps      opam install --deps-only PKG_NAME              Pin git branch      opam pin add https://github.com/PATH_TO_REPO.git#BRANCH_NAME      Create empty switch for coq  opam switch create SWITCH_NAME 4.14.1  opam switch SWITCH_NAME  eval $(opam env)  opam install --deps-only coq-core coq-elpi ocamlformat  ./configure          the first answer is /home/USER/.opam/SWITCH_NAME/bin      the other add the suggested postfix to the previous path without bin        make world  dune install coq-core coq-stdlib coqide-serverRectype error in lsp-server  Use merlin file to get dependency in a ocaml project not using dune  make .merlin  touch dune-project  in ./.vscode/settings.json    \"ocaml.server.args\": [     \"--fallback-read-dot-merlin\" ]      Vnorm error in coq-elpigit clean -dfxOpam exported files  Coq end elpi : hereUseful linkshttps://opam.ocaml.org/doc/FAQ.html"
+  },
+  
+  {
+    "title": "Linux",
+    "url": "/about-me/posts/linux/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-08-12 15:24:55 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "Useful commands            Description      Command                  Restart gnome shell      ALT + F2, then r              Force kill process      kill -9 PID              Switch virtual console  ...",
+    "content": "Useful commands            Description      Command                  Restart gnome shell      ALT + F2, then r              Force kill process      kill -9 PID              Switch virtual console      CTRL + ALT + F1              Install deb      dpkg -i DEB_FILE              Regex replace      echo ... \\| sed 's/IN_REX/OUT_REX/'      Hints on makefile# Create a local variable in a rulerule1:  $(eval VAR := $(shell YOUR_COMMAND))  echo $(VAR)# Apply rule to all tex filesRES_DIR = pdfSOURCES = $(shell ls *.tex)OBJECTS = $(addprefix $(RES_DIR)/,$(SOURCES:%.tex=%.pdf))ci: $(OBJECTS)$(RES_DIR)/%.pdf: %.tex  ...            Description      Command                  Variable local to target      $(eval year := $(shell YOUR_COMMAND))      Useful packagesIn the following sections some packages I find quite usefulZshzsh is an alternative to the bash terminal, it has a powerful autocompletionengine. It can be installed trough sudo apt-get install zsh and can be setas default terminal with chsh -s $(which zsh). I have experienced sometroubles with this command and a small hack to solve this problem is to run thefollowing line of code.echo -e \"\\nexport SHELL=\\\"/usr/bin/zsh\\\"\" &gt;&gt; $HOME/.profile  File with a custom version to be sourced in .zshrc is hereSet keybindings for history searchautoload -U history-search-endzle -N history-beginning-search-backward-end history-search-endzle -N history-beginning-search-forward-end history-search-endbindkey \"^[[5~\" history-beginning-search-backward-endbindkey \"^[[6~\" history-beginning-search-forward-end  To get the keycode associated to a key, enter the command cat in a terminal end then type the wanted keyCopyqCopy/paste is a feature daily used on computers. The copyq package allows tokeep in memory the list of all the copied texts so that you can paste them in asecond moment. It can be installed through sudo apt-get install copyq. Thispackage can be launched at boot by adding thecommand copyq --start-server in the list of startup applications.PandocLatex is a standard package to render professional and readable pdf files. It issometime the case that setting up all the configuration for a latex environmentis not so practical. An alternative to this is to use the pandoc packagewhich allows to convert markdown files into pdf using the latex engine. Pandocis also capable to convert md files into html.To render html files, I usually run:pandoc --toc --number-sections -s --embed-resources --standalone  \\  inFile                                                          \\  --mathjax=path2/tex-chtml-full.js                               \\  --include-in-header=path2/header.html                           \\  --lua-filter=path2/luaFile.luawhere  inFile is the markdown file to be rendered in html  tex-chtml-full.js is the js file allowing to render mathjax in html  header.html contains some html code to be added in the header of therendered html  luaFile.lua is a lua file allowing to preprocess the markdown file beforethe html rendering is done  The list of options passed to the pandoc command produces a standalone htmldocument with toc and where the sections are numberedMiscellaneous  Opam is the package manager used for ocaml projects. The following post givesmore details about how you can deal with it, see here  python-is-python3 allowing to call python is the terminal instead ofpython3  VSCode on of the most used IDE worldwide (the package name is code)  pygments is a python extension to compile minted code of tex filesInstall the previous packagesIn a new computer, I usually run the following list of command to install thepackages/scripts mentioned above. I also initialize opamsudo apt-get install \\  code zsh python-is-python3 \\  opam copyq texlive-latex-extra python3-pip &amp;&amp;wget \\  \"https://github.com/jgm/pandoc/releases/download/3.1.9/pandoc-3.1.9-1-amd64.deb\" \\  \"https://fissored.github.io/MyHelp/zip/battery_health\"  \"https://fissored.github.io/MyHelp/zip/opam_switch_coq_elpi.txt\" &amp;&amp;mv ./battery_health /home/$USER \\pip install pygments \\sudo dpkg -i pandoc-3.1.9-1-amd64.deb  battery_alert is documented hereMiscellaneousSet local time:echo -e \"\\nexport LC_TIME=\\\"en_IE.utf8\\\"\" &gt;&gt; $HOME/.profile  en_IE.utf8 is for English, Ireland"
+  },
+  
+  {
+    "title": "Latex",
+    "url": "/about-me/posts/latex/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-08-12 15:24:55 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "A latex report template is here : linkA latex presentation template is here : linkGraphics and images\\begin{figure}[!htb]  \\centering  \\begin{subfigure}[b]{0.25\\textwidth}    \\includegraphics[width...",
+    "content": "A latex report template is here : linkA latex presentation template is here : linkGraphics and images\\begin{figure}[!htb]  \\centering  \\begin{subfigure}[b]{0.25\\textwidth}    \\includegraphics[width=\\textwidth]{YOUR IMAGE PATH}    \\caption{Caption 1}    \\label{fig:Label1}  \\end{subfigure}  \\begin{subfigure}[b]{0.25\\textwidth}    \\includegraphics[width=\\textwidth]{YOUR IMAGE PATH}    \\caption{Caption 2}    \\label{fig:Label2}  \\end{subfigure}  \\caption{Global caption}  \\label{fig:GlobalLabel}\\end{figure}Create graphs in Latex (With .DOT files)In header: \\usepackage{tikz}Install dot2tex in your machine (see this).Then run the command on a dot file and it will transform it in a tikzpicture.To resize a tikzpicture :\\begin{tikzpicture}[&gt;=latex',line join=bevel,scale=0.5]Inline image$\\begin{array}{l}  \\includegraphics[height=0.5cm]{Your Image}\\end{array}$Columns\\begin{columns}  \\begin{column}{0.6\\textwidth}    Some content  \\end{column}  \\begin{column}{0.4\\textwidth}    Some content  \\end{column}\\end{columns}Table\\begin{tabular}{|lc|}  \\hline  C11        &amp; C12    \\\\  C21        &amp; C22    \\\\  C31        &amp; C32    \\\\  \\hline\\end{tabular}A table generator in this Link  Multicolumn: \\multicolumn{2}{c}{TXT}  Multirow: \\multirow{2}{*}{TXT}[Note: add \\usepackage{multirow} in header]AlgorithmsIn header:  \\usepackage[linesnumbered,ruled]{algorithm2e}  \\usepackage{mathtools}  Note: Math Symbols are rendered correctlyExample:\\begin{algorithm}[H]  \\caption{Angluin L* algorithm}  \\label{L_star_algo}  \\KwIn{$\\Sigma$}  \\KwOut{$A \\text{ such that } L(A) = U$}  $S \\gets \\{\\E\\}, E \\gets \\{\\E\\}, T \\gets \\text{new Dict()}$\\;  \\While{$True$}{    \\If{$(S,E,T) \\text{ is not complete}$}{      $complete(S,E,T) \\text{ with membership queries}$\\;    }    \\uIf{$(S, E, T) \\text{ is not closed}$}{      BLA\\;    }    \\uElseIf{$(S,E,T) \\text{ is not consistent}$}{      BLA\\;    }    \\Else{      BLA\\;      \\uIf{$\\text{teacherAnswer is a counter example t}$}{        \\For{$p \\in Pref(t)$}{          BLA\\;        }      }      \\Else{        \\Return A \\tcp*{The Teacher accepted the automaton}      }    }  }\\end{algorithm}MintedIn header: \\usepackage[outputdir=.aux]{minted}  [outputdir=.aux] is the optional argument telling minted where toput the compiled files. Note that this requires to pass the option--output-directory=.aux to be passed.  To compile with minted, you need to pass the argument --shell-escape.When sending conference paper, the CI may not use --shell-escape, to overcome thisissue, follow this. Essentially,you build once the project with --shell-escape and the flag finalizecachein the \\usepackage[finalizecache]{minted}, then the source code to sendshould have the flag frozencache, like this: \\usepackage[frozencache]{minted}MiscellaneousIn the table of content (TOC) if you put a * after the section, it will not be consideredExample:\\section*{Introduction}Introduction will not be in the TOCRotate text :\\usepackage{rotating}\\begin{turn}{90}  Text\\end{turn}Compile with bibliographyTo set the out folder. (Note: If you use mint for algorithms, remember to include\\usepackage[outputdir=.aux]{minted})  pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex-output-directory .aux  biber --output_directory .aux %BeamerElement appears after x : uncover&lt;2-&gt;{YOUR-ELEMENT}For list (enumerate or itemize) : [&lt;+-&gt;] every item appears in a new slideTo put a content in multiple pages \\begin{frame}[allowframebreaks]{Title}"
+  },
+  
+  {
+    "title": "Git & Github",
+    "url": "/about-me/posts/github/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-08-12 15:24:55 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "Main commands            Description      Command                  Clean brute force      git clean -dfx              All branch names      git show-ref              Add worktree      git worktree ...",
+    "content": "Main commands            Description      Command                  Clean brute force      git clean -dfx              All branch names      git show-ref              Add worktree      git worktree add PATH EXISTING_BRANCH              Add worktree new branch      git worktree add -b NEW_BRANCH_NAME PATH              Fetch all      git fetch --all              Show remote list      git remote show              Show remote url      git remote -v              Rename remote      git remote rename OLD_NAME NEW_NAME              Remove branch locally      git branch -d BRANCH_NAME              Remove branch globally      git branch --delete BRANCH_NAME              Stash selected files      git stash -- file names              Stash only unstaged files      git stash push --keep-index              Undo last local commit      git reset HEAD~              Add remote repo      git remote add NEW_NAME GITHUB_URL      Git pre-commitSometimes it is useful to test the repository before committing your modificationto git. This test can be run locally and if it passes, the commit will be executed. To add this pre-commit test, you need to add/edit the in ./.git/hooks/pre-commit (which should be an executable file, i.e. chmod u+x).An minimal example of pre-commit file could be:#!/usr/bin/env bashmake test &gt;&amp; /dev/nullRESULT=$?if [[ ${RESULT} -ne 0 ]]then  RED='\\033[0;31m'  printf \"${RED}Unit tests failed. Commit rejected\\n\"fiexit ${RESULT}The pre-commit file can also run custom scripts, for example, you can do#!/usr/bin/env bash./my-script.shwhere ./my-script.sh is at the root of the git folder  source: hereAn interesting pre-commit file to trim trailing spaces can be found here (source)Undo rebase  git reflog  find the commit labeled HEAD@{N} rebase (start) when N is a number  git reset --hard HEAD@{N-1}for example, if I do git rebase target-branch and want to undo the rebase,I should find a line like HEAD@{196}: rebase (start): checkout xx/target-branchin the git reflog. Then I should simply run git reset --hard HEAD@{195}Squash commitsGoal: you want to squash some commits.  take a commit hash before the commit you want to squash  git rebase -i COMMIT_NAME  in the interactive window, chose the commits to squash and replace pick with s  run git push origin BRANCH_NAME -f  source: hereSet ssh key&gt; ssh-keygen -t rsa&gt; git config --global user.name \"Your Name\"&gt; git config --global user.email \"Your email address\"&gt; cat ~/.ssh/id_rsa.pub                       # Copy/paste it into the SSH setting panel of githubSet gpg key&gt; sudo apt-get install gnupg;&gt; gpg --full-generate                         # Set RSA length to 4096&gt; gpg --list-secret-keys --keyid-format=long  # KEY_ID is between `sec rsa4096/` and expiring date&gt; gpg --armor --export KEY_ID                 # Copy/paste it into the GPG setting panel of github&gt; git config --global commit.gpgsign true     # To set gpg sing to true&gt; git config --global user.signingkey KEY_ID  # Set the key id of the gpg keyClone remote folder in current branch  git remote add bar https://github.com/uns-iut-info/you-are-unique-time-to-tank  git remote update  git switch -c baz  git merge –allow-unrelated-histories bar/main  git push -u origin mainUseful links  https://www.nobledesktop.com/learn/git/git-branches  Git Gui  Autolinked references and URLs"
+  },
+  
+  {
+    "title": "Docker",
+    "url": "/about-me/posts/docker/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-08-12 15:24:55 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "About  Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation.Source: Wi...",
+    "content": "About  Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation.Source: WikipediaUseful commands  All commands should be run in root mode  Note: A Docker image creates containers to run on the Docker platform.            Description      Command                  Install dockerfile      docker build -t IMAGE_NAME .              List images      docker images              Run image with bash      docker run -i -t IMAGE_ID /bin/bash              Copy file into container      docker cp PATH1 DOCKER_CONTAINER:PATH2      Installation# Uninstall conflicting packagesfor pkg in docker.io docker-doc docker-compose docker-compose-v2 \\  podman-docker containerd runc; do sudo apt-get remove $pkg; done# Add Docker's official GPG key:sudo apt-get updatesudo apt-get install ca-certificates curlsudo install -m 0755 -d /etc/apt/keyringssudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.ascsudo chmod a+r /etc/apt/keyrings/docker.asc# Add the repository to Apt sources:echo \\  \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \\  $(. /etc/os-release &amp;&amp; echo \"$VERSION_CODENAME\") stable\" | \\  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/nullsudo apt-get update# Install latest versionsudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin# Verify that docker installation is successfulsudo docker run hello-worldSource: hereDockerfile exampleDockerfile example of full latex installation:FROM ubuntu:xenialENV DEBIAN_FRONTEND noninteractiveRUN apt-get update -q &amp;&amp; apt-get install -qy \\    texlive-full \\    python-pygments gnuplot \\    make git \\    &amp;&amp; rm -rf /var/lib/apt/lists/*WORKDIR /dataVOLUME [\"/data\"]"
+  }
+  
 ]
+
