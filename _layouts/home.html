@@ -31,7 +31,10 @@ refactor: true
   {% assign default_beg = 0 %}
 {% endif %}
 
-{% assign default_num = paginator.posts | size | minus: pinned_num %}
+<!-- Davide: Original code was paginator.posts, but it does not work, so replaced
+             with default -->
+<!-- {% assign default_num = paginator.posts | size | minus: pinned_num %} -->
+{% assign default_num = default | size | minus: pinned_num %}
 {% assign default_end = default_beg | plus: default_num | minus: 1 %}
 
 {% if default_num > 0 %}

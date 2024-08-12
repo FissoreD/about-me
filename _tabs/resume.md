@@ -1,7 +1,7 @@
 ---
 layout: default_cv
 title: Resume
-order: 3
+order: 2
 icon: fas fa-list-alt
 ---
 
