@@ -1,33 +1,33 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>/about-me/</id>
+  <id>/about_me/</id>
   <title>Davide Fissore</title>
   <subtitle>FissoreD</subtitle>
-  <updated>2024-08-13T21:43:28+02:00</updated>
+  <updated>2024-08-13T21:48:47+02:00</updated>
   <author>
     <name>Davide Fissore</name>
-    <uri>/about-me/</uri>
+    <uri>/about_me/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="/about-me/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="/about_me/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="/about-me/"/>
+    href="/about_me/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
   <rights> © 2024 Davide Fissore </rights>
-  <icon>/about-me/assets/img/favicons/favicon.ico</icon>
-  <logo>/about-me/assets/img/favicons/favicon-96x96.png</logo>
+  <icon>/about_me/assets/img/favicons/favicon.ico</icon>
+  <logo>/about_me/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
     <title>My scripts</title>
-    <link href="/about-me/posts/scripts/" rel="alternate" type="text/html" title="My scripts" />
+    <link href="/about_me/posts/scripts/" rel="alternate" type="text/html" title="My scripts" />
     <published>2024-08-12T15:24:55+02:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
-    <id>/about-me/posts/scripts/</id>
-    <content src="/about-me/posts/scripts/" />
+    <id>/about_me/posts/scripts/</id>
+    <content src="/about_me/posts/scripts/" />
     <author>
       <name>Davide Fissore</name>
     </author>
@@ -59,13 +59,13 @@ bash language notifying at regular intervals if the batt...</summary>
   
   <entry>
     <title>Ocaml</title>
-    <link href="/about-me/posts/ocaml/" rel="alternate" type="text/html" title="Ocaml" />
+    <link href="/about_me/posts/ocaml/" rel="alternate" type="text/html" title="Ocaml" />
     <published>2024-08-12T15:24:55+02:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
-    <id>/about-me/posts/ocaml/</id>
-    <content src="/about-me/posts/ocaml/" />
+    <id>/about_me/posts/ocaml/</id>
+    <content src="/about_me/posts/ocaml/" />
     <author>
       <name>Davide Fissore</name>
     </author>
@@ -113,13 +113,13 @@ Main commands
   
   <entry>
     <title>Linux</title>
-    <link href="/about-me/posts/linux/" rel="alternate" type="text/html" title="Linux" />
+    <link href="/about_me/posts/linux/" rel="alternate" type="text/html" title="Linux" />
     <published>2024-08-12T15:24:55+02:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
-    <id>/about-me/posts/linux/</id>
-    <content src="/about-me/posts/linux/" />
+    <id>/about_me/posts/linux/</id>
+    <content src="/about_me/posts/linux/" />
     <author>
       <name>Davide Fissore</name>
     </author>
@@ -170,13 +170,13 @@ Hints on makefile
   
   <entry>
     <title>Latex</title>
-    <link href="/about-me/posts/latex/" rel="alternate" type="text/html" title="Latex" />
+    <link href="/about_me/posts/latex/" rel="alternate" type="text/html" title="Latex" />
     <published>2024-08-12T15:24:55+02:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
-    <id>/about-me/posts/latex/</id>
-    <content src="/about-me/posts/latex/" />
+    <id>/about_me/posts/latex/</id>
+    <content src="/about_me/posts/latex/" />
     <author>
       <name>Davide Fissore</name>
     </author>
@@ -206,13 +206,13 @@ Graphics and images
   
   <entry>
     <title>Git &amp; Github</title>
-    <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
+    <link href="/about_me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
     <published>2024-08-12T15:24:55+02:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
-    <id>/about-me/posts/github/</id>
-    <content src="/about-me/posts/github/" />
+    <id>/about_me/posts/github/</id>
+    <content src="/about_me/posts/github/" />
     <author>
       <name>Davide Fissore</name>
     </author>
