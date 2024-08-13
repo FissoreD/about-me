@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: /about_me/sitemap.xml
+Sitemap: /about-me/sitemap.xml

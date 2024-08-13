@@ -2,7 +2,7 @@
   
   {
     "title": "My scripts",
-    "url": "/about_me/posts/scripts/",
+    "url": "/about-me/posts/scripts/",
     "categories": "",
     "tags": "",
     "date": "2024-08-12 15:24:55 +0200",
@@ -19,7 +19,7 @@
   
   {
     "title": "Ocaml",
-    "url": "/about_me/posts/ocaml/",
+    "url": "/about-me/posts/ocaml/",
     "categories": "",
     "tags": "",
     "date": "2024-08-12 15:24:55 +0200",
@@ -36,7 +36,7 @@
   
   {
     "title": "Linux",
-    "url": "/about_me/posts/linux/",
+    "url": "/about-me/posts/linux/",
     "categories": "",
     "tags": "",
     "date": "2024-08-12 15:24:55 +0200",
@@ -53,7 +53,7 @@
   
   {
     "title": "Latex",
-    "url": "/about_me/posts/latex/",
+    "url": "/about-me/posts/latex/",
     "categories": "",
     "tags": "",
     "date": "2024-08-12 15:24:55 +0200",
@@ -70,7 +70,7 @@
   
   {
     "title": "Git & Github",
-    "url": "/about_me/posts/github/",
+    "url": "/about-me/posts/github/",
     "categories": "",
     "tags": "",
     "date": "2024-08-12 15:24:55 +0200",
@@ -87,7 +87,7 @@
   
   {
     "title": "Docker",
-    "url": "/about_me/posts/docker/",
+    "url": "/about-me/posts/docker/",
     "categories": "",
     "tags": "",
     "date": "2024-08-12 15:24:55 +0200",
