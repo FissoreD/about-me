@@ -4,7 +4,7 @@
   <id>/about-me/</id>
   <title>Davide Fissore</title>
   <subtitle>FissoreD</subtitle>
-  <updated>2024-08-14T00:43:04+02:00</updated>
+  <updated>2024-08-14T00:46:01+02:00</updated>
   <author>
     <name>Davide Fissore</name>
     <uri>/about-me/</uri>
@@ -17,6 +17,59 @@
   <icon>/about-me/assets/img/favicons/favicon.ico</icon>
   <logo>/about-me/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Git &amp; Github</title>
+    <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
+    <published>2024-08-14T00:45:16+02:00</published>
+  
+    <updated>2024-08-14T00:45:16+02:00</updated>
+  
+    <id>/about-me/posts/github/</id>
+    <content src="/about-me/posts/github/" />
+    <author>
+      <name>Davide Fissore</name>
+    </author>
+
+  
+    
+  
+
+  <summary>Main commands
+
+
+  
+    
+      Description
+      Command
+    
+  
+  
+    
+      Clean brute force
+      git clean -dfx
+    
+    
+      All branch names
+      git show-ref
+    
+    
+      Add worktree
+      git worktree add PATH EXISTING_BRANCH
+    
+    
+      Add worktree new branch
+      git worktree add -b NEW_BRANCH_NAME PATH
+    
+    
+      Fetch all
+      git fetch --all
+    
+    
+      Show...</summary>
+
+  </entry>
 
   
   <entry>
@@ -200,59 +253,6 @@ Graphics and images
   \begin{subfigure}[b]{0.25\textwidth}
     \includegraphics[width=\textwidth]{YOUR IMAGE PATH}
   ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Git &amp; Github</title>
-    <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
-    <published>2024-08-12T15:24:55+02:00</published>
-  
-    <updated>2024-08-12T15:24:55+02:00</updated>
-  
-    <id>/about-me/posts/github/</id>
-    <content src="/about-me/posts/github/" />
-    <author>
-      <name>Davide Fissore</name>
-    </author>
-
-  
-    
-  
-
-  <summary>Main commands
-
-
-  
-    
-      Description
-      Command
-    
-  
-  
-    
-      Clean brute force
-      git clean -dfx
-    
-    
-      All branch names
-      git show-ref
-    
-    
-      Add worktree
-      git worktree add PATH EXISTING_BRANCH
-    
-    
-      Add worktree new branch
-      git worktree add -b NEW_BRANCH_NAME PATH
-    
-    
-      Fetch all
-      git fetch --all
-    
-    
-      Show...</summary>
 
   </entry>
 
