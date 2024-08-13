@@ -26,7 +26,7 @@ image:
 ## Git pre-commit
 
 Sometimes it is useful to test the repository before committing your modification
-to git. This test can be run locally and if it passes, the commit will be 
+to git. This test can be run locally and, if it passes, the commit will be 
 executed. To add this pre-commit test, you need to add/edit the in 
 `./.git/hooks/pre-commit` (which should be an executable file, i.e. `chmod u+x`).
 
