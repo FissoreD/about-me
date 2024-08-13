@@ -1,0 +1,42 @@
+#!/usr/bin/zsh
+
+# Comment `prompt adam1` in .zshrc and add this source 
+
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' enable git svn
+
+precmd() { vcs_info }
+
+setopt prompt_subst
+# %n -> whoami
+# %m -> hostname
+prompt='%F{031}%(5~|%-1~/.../%3~|%5~)%f ${vcs_info_msg_0_}%\> '
+# PROMPT='%F{040}%n%f@%F{166}%m%f:%F{031}%(5~|%-1~/.../%3~|%5~)%f ${vcs_info_msg_0_}%\> '
+
+# %r -> git repo
+# %S -> path to current repo in git
+# %b -> current branch
+# %s -> 'git'
+zstyle ':vcs_info:git*' formats "%{$fg[grey]%}%s %{$fg[blue]%}[%r ⎇  %b]%{$reset_color%}%m%u%c%{$reset_color%} "
+
+alias ocaml="readline-editor -x -h ~/.ocaml_history ocaml"
+alias elpi="readline-editor -x -h ~/.elpi_history elpi"
+alias coqtop="readline-editor -x -h ~/.coqtop_history coqtop"
+alias gitstashpullpop="git stash && git pull && git stash pop"
+
+alias github="cd ~/Documents/github"
+alias resize-hdm1="xrandr --output HDMI-1 --mode 2560x1440"
+
+alias opam-enter="eval \$(opam env --set-switch)"
+
+function work_monitor_setting(){
+   xrandr --output DP-1-1 --mode 2560x1440 &&
+   xrandr --output HDMI-1 --mode 1920x1200
+}
+
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[5~" history-beginning-search-backward-end
+bindkey "^[[6~" history-beginning-search-forward-end
