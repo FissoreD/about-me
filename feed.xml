@@ -4,7 +4,7 @@
   <id>/about-me/</id>
   <title>Davide Fissore</title>
   <subtitle>FissoreD</subtitle>
-  <updated>2024-08-14T00:46:01+02:00</updated>
+  <updated>2024-08-14T09:59:06+02:00</updated>
   <author>
     <name>Davide Fissore</name>
     <uri>/about-me/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>Git &amp; Github</title>
     <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
-    <published>2024-08-14T00:45:16+02:00</published>
+    <published>2024-08-14T09:58:20+02:00</published>
   
-    <updated>2024-08-14T00:45:16+02:00</updated>
+    <updated>2024-08-14T09:58:20+02:00</updated>
   
     <id>/about-me/posts/github/</id>
     <content src="/about-me/posts/github/" />
