@@ -27,7 +27,7 @@ image:
 
 Sometimes it is useful to test the repository before committing your modification
 to git. This test can be run locally and, if it passes, the commit will be 
-executed. To add this pre-commit test, you need to add/edit the in 
+executed. To add this pre-commit test, you need to add/edit the file in 
 `./.git/hooks/pre-commit` (which should be an executable file, i.e. `chmod u+x`).
 
 An minimal example of `pre-commit` file could be:
@@ -59,23 +59,21 @@ where `./my-script.sh` is at the root of the git folder
 
 An interesting pre-commit file to trim trailing spaces can be found [here]({{site.baseurl}}/assets/lib/pre-commit-trim-space.sh) ([source](https://github.com/imoldman/config/blob/master/pre-commit.git.sh))
 
-## Undo rebase
+## Har reset to commit hash
 
 1. `git reflog`
 2. find the commit labeled `HEAD@{N} rebase (start)` when `N` is a number
 3. `git reset --hard HEAD@{N-1}`
 
-for example, if I do `git rebase target-branch` and want to undo the rebase,
+for example, if I do `git rebase target-branch` and want to reset my branch before a rebase,
 I should find a line like `HEAD@{196}: rebase (start): checkout xx/target-branch`
 in the `git reflog`. Then I should simply run `git reset --hard HEAD@{195}`
 
 
 ## Squash commits
 
-*Goal:* you want to squash some commits.
-
 1. take a commit hash before the commit you want to squash
-2. `git rebase -i COMMIT_NAME`
+2. `git rebase -i COMMIT_HASH`
 3. in the interactive window, chose the commits to squash and replace `pick` with `s` 
 4. run `git push origin BRANCH_NAME -f`
 
