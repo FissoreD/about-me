@@ -4,7 +4,7 @@
   <id>/about-me/</id>
   <title>Davide Fissore</title>
   <subtitle>FissoreD</subtitle>
-  <updated>2024-08-16T12:40:32+02:00</updated>
+  <updated>2024-08-16T13:07:59+02:00</updated>
   <author>
     <name>Davide Fissore</name>
     <uri>/about-me/</uri>
@@ -20,62 +20,9 @@
 
   
   <entry>
-    <title>Git &amp; Github</title>
-    <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
-    <published>2024-08-14T09:58:20+02:00</published>
-  
-    <updated>2024-08-14T09:58:20+02:00</updated>
-  
-    <id>/about-me/posts/github/</id>
-    <content src="/about-me/posts/github/" />
-    <author>
-      <name>Davide Fissore</name>
-    </author>
-
-  
-    
-  
-
-  <summary>Main commands
-
-
-  
-    
-      Description
-      Command
-    
-  
-  
-    
-      Clean brute force
-      git clean -dfx
-    
-    
-      All branch names
-      git show-ref
-    
-    
-      Add worktree
-      git worktree add PATH EXISTING_BRANCH
-    
-    
-      Add worktree new branch
-      git worktree add -b NEW_BRANCH_NAME PATH
-    
-    
-      Fetch all
-      git fetch --all
-    
-    
-      Show...</summary>
-
-  </entry>
-
-  
-  <entry>
     <title>My scripts</title>
     <link href="/about-me/posts/scripts/" rel="alternate" type="text/html" title="My scripts" />
-    <published>2024-08-12T15:24:55+02:00</published>
+    <published>2024-08-16T13:07:59+02:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
@@ -113,7 +60,7 @@ bash language notifying at regular intervals if the batt...</summary>
   <entry>
     <title>Ocaml</title>
     <link href="/about-me/posts/ocaml/" rel="alternate" type="text/html" title="Ocaml" />
-    <published>2024-08-12T15:24:55+02:00</published>
+    <published>2024-08-16T13:07:59+02:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
@@ -167,7 +114,7 @@ Main commands
   <entry>
     <title>Linux</title>
     <link href="/about-me/posts/linux/" rel="alternate" type="text/html" title="Linux" />
-    <published>2024-08-12T15:24:55+02:00</published>
+    <published>2024-08-16T13:07:59+02:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
@@ -224,7 +171,7 @@ Hints on makefile
   <entry>
     <title>Latex</title>
     <link href="/about-me/posts/latex/" rel="alternate" type="text/html" title="Latex" />
-    <published>2024-08-12T15:24:55+02:00</published>
+    <published>2024-08-16T13:07:59+02:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
@@ -253,6 +200,59 @@ Graphics and images
   \begin{subfigure}[b]{0.25\textwidth}
     \includegraphics[width=\textwidth]{YOUR IMAGE PATH}
   ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Git &amp; Github</title>
+    <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
+    <published>2024-08-16T13:07:59+02:00</published>
+  
+    <updated>2024-08-14T09:58:20+02:00</updated>
+  
+    <id>/about-me/posts/github/</id>
+    <content src="/about-me/posts/github/" />
+    <author>
+      <name>Davide Fissore</name>
+    </author>
+
+  
+    
+  
+
+  <summary>Main commands
+
+
+  
+    
+      Description
+      Command
+    
+  
+  
+    
+      Clean brute force
+      git clean -dfx
+    
+    
+      All branch names
+      git show-ref
+    
+    
+      Add worktree
+      git worktree add PATH EXISTING_BRANCH
+    
+    
+      Add worktree new branch
+      git worktree add -b NEW_BRANCH_NAME PATH
+    
+    
+      Fetch all
+      git fetch --all
+    
+    
+      Show...</summary>
 
   </entry>
 
