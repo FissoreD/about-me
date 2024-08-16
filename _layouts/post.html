@@ -19,10 +19,12 @@ tail_includes:
 
     <div class="post-meta text-muted">
       <!-- published date -->
-      <span>
-        {{ site.data.locales[lang].post.posted }}
-        {% include datetime.html date=page.date tooltip=true lang=lang %}
-      </span>
+      {% if page.posted %}
+        <span>
+          {{ site.data.locales[lang].post.posted }}
+          {% include datetime.html date=page.date tooltip=true lang=lang %}
+        </span>
+      {% endif %}
 
       <!-- lastmod date -->
       {% if page.last_modified_at and page.last_modified_at != page.date %}

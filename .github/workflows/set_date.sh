@@ -27,10 +27,12 @@ add_line_after () {
 }
 
 for f in ./_posts/* ./_tabs/*; do
-  x=$(date_0 $f);
-  y=$(date_n $f);
-  add_line_after "posted:" "$x" $f;
-  add_line_after "date:" "$y" $f
+  if [ $f != ./_tabs/publications.md ]; then
+    x=$(date_0 $f);
+    y=$(date_n $f);
+    add_line_after "posted:" "$x" $f;
+    add_line_after "last_modified_at:" "$y" $f
+  fi
 done
 
 # Small change in post.html layout to print the posted date
