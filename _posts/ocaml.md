@@ -1,5 +1,5 @@
 ---
-title: "Ocaml"
+title: "Ocaml & Opam"
 image:
   path: /assets/img/logo_opam.png
 ...
@@ -25,6 +25,7 @@ image:
 | Import switch        | `opam switch import FILE_EXPORT.txt --switch SWITCH_NAME`      |
 | Install only deps    | `opam install --deps-only PKG_NAME`                            |
 | Pin git branch       | `opam pin add https://github.com/PATH_TO_REPO.git#BRANCH_NAME` |
+| Install pkg version  | `opam install PKG_NAME=VERSION`                                |
 
 ### Create empty switch for coq
 
