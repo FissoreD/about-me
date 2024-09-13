@@ -5,7 +5,7 @@
     "url": "/about-me/posts/scripts/",
     "categories": "",
     "tags": "",
-    "date": "2024-08-16 13:07:59 +0200",
+    "date": "2024-09-13 17:49:48 +0200",
     
 
 
@@ -18,11 +18,11 @@
   },
   
   {
-    "title": "Ocaml",
+    "title": "Ocaml & Opam",
     "url": "/about-me/posts/ocaml/",
     "categories": "",
     "tags": "",
-    "date": "2024-08-16 13:07:59 +0200",
+    "date": "2024-09-13 17:49:48 +0200",
     
 
 
@@ -31,7 +31,7 @@
 
     
     "snippet": "perf: profile ocaml performance            Description      Command                  Profile file      sudo perf record --call-graph lbr -- OCAML_BIN              Profile with name      sudo perf r...",
-    "content": "perf: profile ocaml performance            Description      Command                  Profile file      sudo perf record --call-graph lbr -- OCAML_BIN              Profile with name      sudo perf record --call-graph lbr -o perf.data.old -- OCAML_BIN              Compare perf files      sudo perf diff perf.data.old perf.data      OpamMain commands            Description      Command                  Create global switch      opam switch create SWITCH_NAME 4.14.1              Create local switch      opam switch create . 4.14.1              Remove switch      opam switch remove SWITCH_NAME              Export switch      opam switch export FILE_EXPORT.txt --switch SWITCH_NAME              Import switch      opam switch import FILE_EXPORT.txt --switch SWITCH_NAME              Install only deps      opam install --deps-only PKG_NAME              Pin git branch      opam pin add https://github.com/PATH_TO_REPO.git#BRANCH_NAME      Create empty switch for coq  opam switch create SWITCH_NAME 4.14.1  opam switch SWITCH_NAME  eval $(opam env)  opam install --deps-only coq-core coq-elpi ocamlformat  ./configure          the first answer is /home/USER/.opam/SWITCH_NAME/bin      the other add the suggested postfix to the previous path without bin        make world  dune install coq-core coq-stdlib coqide-serverRectype error in lsp-server  Use merlin file to get dependency in a ocaml project not using dune  make .merlin  touch dune-project  in ./.vscode/settings.json    \"ocaml.server.args\": [     \"--fallback-read-dot-merlin\" ]      Vnorm error in coq-elpigit clean -dfxOpam exported files  Coq end elpi : hereUseful linkshttps://opam.ocaml.org/doc/FAQ.html"
+    "content": "perf: profile ocaml performance            Description      Command                  Profile file      sudo perf record --call-graph lbr -- OCAML_BIN              Profile with name      sudo perf record --call-graph lbr -o perf.data.old -- OCAML_BIN              Compare perf files      sudo perf diff perf.data.old perf.data      OpamMain commands            Description      Command                  Create global switch      opam switch create SWITCH_NAME 4.14.1              Create local switch      opam switch create . 4.14.1              Remove switch      opam switch remove SWITCH_NAME              Export switch      opam switch export FILE_EXPORT.txt --switch SWITCH_NAME              Import switch      opam switch import FILE_EXPORT.txt --switch SWITCH_NAME              Install only deps      opam install --deps-only PKG_NAME              Pin git branch      opam pin add https://github.com/PATH_TO_REPO.git#BRANCH_NAME              Install pkg version      opam install PKG_NAME=VERSION      Create empty switch for coq  opam switch create SWITCH_NAME 4.14.1  opam switch SWITCH_NAME  eval $(opam env)  opam install --deps-only coq-core coq-elpi ocamlformat  ./configure          the first answer is /home/USER/.opam/SWITCH_NAME/bin      the other add the suggested postfix to the previous path without bin        make world  dune install coq-core coq-stdlib coqide-serverRectype error in lsp-server  Use merlin file to get dependency in a ocaml project not using dune  make .merlin  touch dune-project  in ./.vscode/settings.json    \"ocaml.server.args\": [     \"--fallback-read-dot-merlin\" ]      Vnorm error in coq-elpigit clean -dfxOpam exported files  Coq end elpi : hereUseful linkshttps://opam.ocaml.org/doc/FAQ.html"
   },
   
   {
@@ -39,7 +39,7 @@
     "url": "/about-me/posts/linux/",
     "categories": "",
     "tags": "",
-    "date": "2024-08-16 13:07:59 +0200",
+    "date": "2024-09-13 17:49:48 +0200",
     
 
 
@@ -56,7 +56,7 @@
     "url": "/about-me/posts/latex/",
     "categories": "",
     "tags": "",
-    "date": "2024-08-16 13:07:59 +0200",
+    "date": "2024-09-13 17:49:48 +0200",
     
 
 
@@ -73,7 +73,7 @@
     "url": "/about-me/posts/github/",
     "categories": "",
     "tags": "",
-    "date": "2024-08-16 13:07:59 +0200",
+    "date": "2024-09-13 17:49:48 +0200",
     
 
 
@@ -90,7 +90,7 @@
     "url": "/about-me/posts/docker/",
     "categories": "",
     "tags": "",
-    "date": "2024-08-16 13:07:59 +0200",
+    "date": "2024-09-13 17:49:48 +0200",
     
 
 
