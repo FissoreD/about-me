@@ -12,6 +12,8 @@ image:
 | Profile with name  | `sudo perf record --call-graph lbr -o perf.data.old -- OCAML_BIN` |
 | Compare perf files | `sudo perf diff perf.data.old perf.data`                          |
 
+A good pointer: [here](https://ocaml-explore.netlify.app/workflows/profiling-your-project/)
+
 ## Opam
 
 ### Main commands
