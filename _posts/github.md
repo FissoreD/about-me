@@ -22,6 +22,7 @@ image:
 | Stash only unstaged files     | `git stash push --keep-index`              |
 | Undo last local commit        | `git reset HEAD~`                          |
 | Add remote repo               | `git remote add NEW_NAME GITHUB_URL`       |
+| Set remote url                | [See this video](https://www.youtube.com/watch?v=ePCBuIQJAUc) |
 
 ## Git pre-commit
 
