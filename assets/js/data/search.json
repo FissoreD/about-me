@@ -5,7 +5,7 @@
     "url": "/about-me/posts/scripts/",
     "categories": "",
     "tags": "",
-    "date": "2024-10-25 10:37:35 +0200",
+    "date": "2024-11-05 14:28:27 +0100",
     
 
 
@@ -22,7 +22,7 @@
     "url": "/about-me/posts/ocaml/",
     "categories": "",
     "tags": "",
-    "date": "2024-10-25 10:37:35 +0200",
+    "date": "2024-11-05 14:28:27 +0100",
     
 
 
@@ -39,7 +39,7 @@
     "url": "/about-me/posts/linux/",
     "categories": "",
     "tags": "",
-    "date": "2024-10-25 10:37:35 +0200",
+    "date": "2024-11-05 14:28:27 +0100",
     
 
 
@@ -56,7 +56,7 @@
     "url": "/about-me/posts/latex/",
     "categories": "",
     "tags": "",
-    "date": "2024-10-25 10:37:35 +0200",
+    "date": "2024-11-05 14:28:27 +0100",
     
 
 
@@ -73,7 +73,7 @@
     "url": "/about-me/posts/github/",
     "categories": "",
     "tags": "",
-    "date": "2024-10-25 10:37:35 +0200",
+    "date": "2024-11-05 14:28:27 +0100",
     
 
 
@@ -82,7 +82,7 @@
 
     
     "snippet": "Main commands            Description      Command                  Clean brute force      git clean -dfx              All branch names      git show-ref              Add worktree      git worktree ...",
-    "content": "Main commands            Description      Command                  Clean brute force      git clean -dfx              All branch names      git show-ref              Add worktree      git worktree add PATH EXISTING_BRANCH              Add worktree new branch      git worktree add -b NEW_BRANCH_NAME PATH              Fetch all      git fetch --all              Show remote list      git remote show              Show remote url      git remote -v              Rename remote      git remote rename OLD_NAME NEW_NAME              Remove branch locally      git branch -d BRANCH_NAME              Remove branch globally      git branch --delete BRANCH_NAME              Stash selected files      git stash -- file names              Stash only unstaged files      git stash push --keep-index              Undo last local commit      git reset HEAD~              Add remote repo      git remote add NEW_NAME GITHUB_URL      Git pre-commitSometimes it is useful to test the repository before committing your modificationto git. This test can be run locally and, if it passes, the commit will be executed. To add this pre-commit test, you need to add/edit the file in ./.git/hooks/pre-commit (which should be an executable file, i.e. chmod u+x).An minimal example of pre-commit file could be:#!/usr/bin/env bashmake test &gt;&amp; /dev/nullRESULT=$?if [[ ${RESULT} -ne 0 ]]then  RED='\\033[0;31m'  printf \"${RED}Unit tests failed. Commit rejected\\n\"fiexit ${RESULT}The pre-commit file can also run custom scripts, for example, you can do#!/usr/bin/env bash./my-script.shwhere ./my-script.sh is at the root of the git folder  source: hereAn interesting pre-commit file to trim trailing spaces can be found here (source)Har reset to commit hash  git reflog  find the commit labeled HEAD@{N} rebase (start) when N is a number  git reset --hard HEAD@{N-1}for example, if I do git rebase target-branch and want to reset my branch before a rebase,I should find a line like HEAD@{196}: rebase (start): checkout xx/target-branchin the git reflog. Then I should simply run git reset --hard HEAD@{195}Squash commits  take a commit hash before the commit you want to squash  git rebase -i COMMIT_HASH  in the interactive window, chose the commits to squash and replace pick with s  run git push origin BRANCH_NAME -f  source: hereSet ssh key&gt; ssh-keygen -t rsa&gt; git config --global user.name \"Your Name\"&gt; git config --global user.email \"Your email address\"&gt; cat ~/.ssh/id_rsa.pub                       # Copy/paste it into the SSH setting panel of githubSet gpg key&gt; sudo apt-get install gnupg;&gt; gpg --full-generate                         # Set RSA length to 4096&gt; gpg --list-secret-keys --keyid-format=long  # KEY_ID is between `sec rsa4096/` and expiring date&gt; gpg --armor --export KEY_ID                 # Copy/paste it into the GPG setting panel of github&gt; git config --global commit.gpgsign true     # To set gpg sing to true&gt; git config --global user.signingkey KEY_ID  # Set the key id of the gpg keyClone remote folder in current branch  git remote add bar https://github.com/uns-iut-info/you-are-unique-time-to-tank  git remote update  git switch -c baz  git merge –allow-unrelated-histories bar/main  git push -u origin mainUseful links  https://www.nobledesktop.com/learn/git/git-branches  Git Gui  Autolinked references and URLs"
+    "content": "Main commands            Description      Command                  Clean brute force      git clean -dfx              All branch names      git show-ref              Add worktree      git worktree add PATH EXISTING_BRANCH              Add worktree new branch      git worktree add -b NEW_BRANCH_NAME PATH              Fetch all      git fetch --all              Show remote list      git remote show              Show remote url      git remote -v              Rename remote      git remote rename OLD_NAME NEW_NAME              Remove branch locally      git branch -d BRANCH_NAME              Remove branch globally      git branch --delete BRANCH_NAME              Stash selected files      git stash -- file names              Stash only unstaged files      git stash push --keep-index              Undo last local commit      git reset HEAD~              Add remote repo      git remote add NEW_NAME GITHUB_URL              Set remote url      See this video      Git pre-commitSometimes it is useful to test the repository before committing your modificationto git. This test can be run locally and, if it passes, the commit will be executed. To add this pre-commit test, you need to add/edit the file in ./.git/hooks/pre-commit (which should be an executable file, i.e. chmod u+x).An minimal example of pre-commit file could be:#!/usr/bin/env bashmake test &gt;&amp; /dev/nullRESULT=$?if [[ ${RESULT} -ne 0 ]]then  RED='\\033[0;31m'  printf \"${RED}Unit tests failed. Commit rejected\\n\"fiexit ${RESULT}The pre-commit file can also run custom scripts, for example, you can do#!/usr/bin/env bash./my-script.shwhere ./my-script.sh is at the root of the git folder  source: hereAn interesting pre-commit file to trim trailing spaces can be found here (source)Har reset to commit hash  git reflog  find the commit labeled HEAD@{N} rebase (start) when N is a number  git reset --hard HEAD@{N-1}for example, if I do git rebase target-branch and want to reset my branch before a rebase,I should find a line like HEAD@{196}: rebase (start): checkout xx/target-branchin the git reflog. Then I should simply run git reset --hard HEAD@{195}Squash commits  take a commit hash before the commit you want to squash  git rebase -i COMMIT_HASH  in the interactive window, chose the commits to squash and replace pick with s  run git push origin BRANCH_NAME -f  source: hereSet ssh key&gt; ssh-keygen -t rsa&gt; git config --global user.name \"Your Name\"&gt; git config --global user.email \"Your email address\"&gt; cat ~/.ssh/id_rsa.pub                       # Copy/paste it into the SSH setting panel of githubSet gpg key&gt; sudo apt-get install gnupg;&gt; gpg --full-generate                         # Set RSA length to 4096&gt; gpg --list-secret-keys --keyid-format=long  # KEY_ID is between `sec rsa4096/` and expiring date&gt; gpg --armor --export KEY_ID                 # Copy/paste it into the GPG setting panel of github&gt; git config --global commit.gpgsign true     # To set gpg sing to true&gt; git config --global user.signingkey KEY_ID  # Set the key id of the gpg keyClone remote folder in current branch  git remote add bar https://github.com/uns-iut-info/you-are-unique-time-to-tank  git remote update  git switch -c baz  git merge –allow-unrelated-histories bar/main  git push -u origin mainUseful links  https://www.nobledesktop.com/learn/git/git-branches  Git Gui  Autolinked references and URLs"
   },
   
   {
@@ -90,7 +90,7 @@
     "url": "/about-me/posts/docker/",
     "categories": "",
     "tags": "",
-    "date": "2024-10-25 10:37:35 +0200",
+    "date": "2024-11-05 14:28:27 +0100",
     
 
 
