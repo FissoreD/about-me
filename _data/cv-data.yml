@@ -15,8 +15,8 @@ sidebar:
   # Sidebar links
   email: davide [dot] fissore [at] inria.fr
   # phone: +39 331 3533735
-  timezone: Europe/Paris
-  citizenship: Italian
+  # timezone: Europe/Paris
+  # citizenship: Italian
   website: #do not add http://
   linkedin: davide-fissore
   xing:
@@ -28,7 +28,7 @@ sidebar:
   stack-overflow: # Number/Username, e.g. 123456/alandoe
   codewars:
   goodreads: # Number-Username, e.g. 123456-alandoe
-  pdf: "{{site.baseurl}}/resume/print.html"
+  pdf: "{{site.baseurl}}/cv/print.html"
 
   languages:
     title: Languages
@@ -37,10 +37,10 @@ sidebar:
         level: Native
 
       - idiom: French
-        level: Professional
+        level: Proficient
 
       - idiom: English
-        level: Professional
+        level: Proficient
 
   interests:
     title: Interests

@@ -1,8 +1,8 @@
 ---
 layout: cv_print
-title: Resume-Print
+title: CV-Print
 icon: fas fa-list-alt
-permalink: resume/print
+permalink: cv/print
 math: true
 ---
 

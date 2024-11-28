@@ -1,6 +1,6 @@
 ---
 layout: default_cv
-title: Resume
+title: Curriculum Vitae
 order: 2
 icon: fas fa-list-alt
 ---
