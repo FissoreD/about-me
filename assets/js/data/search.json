@@ -5,7 +5,7 @@
     "url": "/about-me/posts/scripts/",
     "categories": "",
     "tags": "",
-    "date": "2024-12-29 18:16:24 +0100",
+    "date": "2024-12-30 00:04:52 +0100",
     
 
 
@@ -22,7 +22,7 @@
     "url": "/about-me/posts/ocaml/",
     "categories": "",
     "tags": "",
-    "date": "2024-12-29 18:16:24 +0100",
+    "date": "2024-12-30 00:04:52 +0100",
     
 
 
@@ -39,7 +39,7 @@
     "url": "/about-me/posts/linux/",
     "categories": "",
     "tags": "",
-    "date": "2024-12-29 18:16:24 +0100",
+    "date": "2024-12-30 00:04:52 +0100",
     
 
 
@@ -56,7 +56,7 @@
     "url": "/about-me/posts/latex/",
     "categories": "",
     "tags": "",
-    "date": "2024-12-29 18:16:24 +0100",
+    "date": "2024-12-30 00:04:52 +0100",
     
 
 
@@ -65,7 +65,7 @@
 
     
     "snippet": "A latex report template is here : linkA latex presentation template is here : linkGraphics and images\\begin{figure}[!htb]  \\centering  \\begin{subfigure}[b]{0.25\\textwidth}    \\includegraphics[width...",
-    "content": "A latex report template is here : linkA latex presentation template is here : linkGraphics and images\\begin{figure}[!htb]  \\centering  \\begin{subfigure}[b]{0.25\\textwidth}    \\includegraphics[width=\\textwidth]{YOUR IMAGE PATH}    \\caption{Caption 1}    \\label{fig:Label1}  \\end{subfigure}  \\begin{subfigure}[b]{0.25\\textwidth}    \\includegraphics[width=\\textwidth]{YOUR IMAGE PATH}    \\caption{Caption 2}    \\label{fig:Label2}  \\end{subfigure}  \\caption{Global caption}  \\label{fig:GlobalLabel}\\end{figure}Create graphs in Latex (With .DOT files)In header: \\usepackage{tikz}Install dot2tex in your machine (see this).Then run the command on a dot file and it will transform it in a tikzpicture.To resize a tikzpicture :\\begin{tikzpicture}[&gt;=latex',line join=bevel,scale=0.5]Inline image$\\begin{array}{l}  \\includegraphics[height=0.5cm]{Your Image}\\end{array}$Columns\\begin{columns}  \\begin{column}{0.6\\textwidth}    Some content  \\end{column}  \\begin{column}{0.4\\textwidth}    Some content  \\end{column}\\end{columns}Table\\begin{tabular}{|lc|}  \\hline  C11        &amp; C12    \\\\  C21        &amp; C22    \\\\  C31        &amp; C32    \\\\  \\hline\\end{tabular}A table generator in this Link  Multicolumn: \\multicolumn{2}{c}{TXT}  Multirow: \\multirow{2}{*}{TXT}[Note: add \\usepackage{multirow} in header]AlgorithmsIn header:  \\usepackage[linesnumbered,ruled]{algorithm2e}  \\usepackage{mathtools}  Note: Math Symbols are rendered correctlyExample:\\begin{algorithm}[H]  \\caption{Angluin L* algorithm}  \\label{L_star_algo}  \\KwIn{$\\Sigma$}  \\KwOut{$A \\text{ such that } L(A) = U$}  $S \\gets \\{\\E\\}, E \\gets \\{\\E\\}, T \\gets \\text{new Dict()}$\\;  \\While{$True$}{    \\If{$(S,E,T) \\text{ is not complete}$}{      $complete(S,E,T) \\text{ with membership queries}$\\;    }    \\uIf{$(S, E, T) \\text{ is not closed}$}{      BLA\\;    }    \\uElseIf{$(S,E,T) \\text{ is not consistent}$}{      BLA\\;    }    \\Else{      BLA\\;      \\uIf{$\\text{teacherAnswer is a counter example t}$}{        \\For{$p \\in Pref(t)$}{          BLA\\;        }      }      \\Else{        \\Return A \\tcp*{The Teacher accepted the automaton}      }    }  }\\end{algorithm}MintedIn header: \\usepackage[outputdir=.aux]{minted}  [outputdir=.aux] is the optional argument telling minted where toput the compiled files. Note that this requires to pass the option--output-directory=.aux to be passed.  To compile with minted, you need to pass the argument --shell-escape.When sending conference paper, the CI may not use --shell-escape, to overcome thisissue, follow this. Essentially,you build once the project with --shell-escape and the flag finalizecachein the \\usepackage[finalizecache]{minted}, then the source code to sendshould have the flag frozencache, like this: \\usepackage[frozencache]{minted}MiscellaneousIn the table of content (TOC) if you put a * after the section, it will not be consideredExample:\\section*{Introduction}Introduction will not be in the TOCRotate text :\\usepackage{rotating}\\begin{turn}{90}  Text\\end{turn}Compile with bibliographyTo set the out folder. (Note: If you use mint for algorithms, remember to include\\usepackage[outputdir=.aux]{minted})  pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex-output-directory .aux  biber --output_directory .aux %BeamerElement appears after x : uncover&lt;2-&gt;{YOUR-ELEMENT}For list (enumerate or itemize) : [&lt;+-&gt;] every item appears in a new slideTo put a content in multiple pages \\begin{frame}[allowframebreaks]{Title}Install custom versioncd /tmp                                  # or some other working directorywget https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/20XX/tlnet-final/install-tl-unx.tar.gz # XX is a year versionzcat &lt; install-tl-unx.tar.gz | tar xf -  # See below about the tar archive namecd install-tl-*/                         # Replace with the directory that zcat/tar actually producedsudo mkdir /usr/local/texlivesudo chown $USER /usr/local/texlive      # See below regarding root or group ownership./install-tl -repository ftp://tug.org/historic/systems/texlive/20XX/tlnet-finalFinally, prepend /usr/local/texlive/20XX/bin/x86_64-linux (replacing the yearand platform as appropriate) to your PATHSource: here"
+    "content": "A latex report template is here : linkA latex presentation template is here : linkGraphics and images\\begin{figure}[!htb]  \\centering  \\begin{subfigure}[b]{0.25\\textwidth}    \\includegraphics[width=\\textwidth]{YOUR IMAGE PATH}    \\caption{Caption 1}    \\label{fig:Label1}  \\end{subfigure}  \\begin{subfigure}[b]{0.25\\textwidth}    \\includegraphics[width=\\textwidth]{YOUR IMAGE PATH}    \\caption{Caption 2}    \\label{fig:Label2}  \\end{subfigure}  \\caption{Global caption}  \\label{fig:GlobalLabel}\\end{figure}Create graphs in Latex (With .DOT files)In header: \\usepackage{tikz}Install dot2tex in your machine (see this).Then run the command on a dot file and it will transform it in a tikzpicture.To resize a tikzpicture :\\begin{tikzpicture}[&gt;=latex',line join=bevel,scale=0.5]Inline image$\\begin{array}{l}  \\includegraphics[height=0.5cm]{Your Image}\\end{array}$Columns\\begin{columns}  \\begin{column}{0.6\\textwidth}    Some content  \\end{column}  \\begin{column}{0.4\\textwidth}    Some content  \\end{column}\\end{columns}Table\\begin{tabular}{|lc|}  \\hline  C11        &amp; C12    \\\\  C21        &amp; C22    \\\\  C31        &amp; C32    \\\\  \\hline\\end{tabular}A table generator in this Link  Multicolumn: \\multicolumn{2}{c}{TXT}  Multirow: \\multirow{2}{*}{TXT}[Note: add \\usepackage{multirow} in header]AlgorithmsIn header:  \\usepackage[linesnumbered,ruled]{algorithm2e}  \\usepackage{mathtools}  Note: Math Symbols are rendered correctlyExample:\\begin{algorithm}[H]  \\caption{Angluin L* algorithm}  \\label{L_star_algo}  \\KwIn{$\\Sigma$}  \\KwOut{$A \\text{ such that } L(A) = U$}  $S \\gets \\{\\E\\}, E \\gets \\{\\E\\}, T \\gets \\text{new Dict()}$\\;  \\While{$True$}{    \\If{$(S,E,T) \\text{ is not complete}$}{      $complete(S,E,T) \\text{ with membership queries}$\\;    }    \\uIf{$(S, E, T) \\text{ is not closed}$}{      BLA\\;    }    \\uElseIf{$(S,E,T) \\text{ is not consistent}$}{      BLA\\;    }    \\Else{      BLA\\;      \\uIf{$\\text{teacherAnswer is a counter example t}$}{        \\For{$p \\in Pref(t)$}{          BLA\\;        }      }      \\Else{        \\Return A \\tcp*{The Teacher accepted the automaton}      }    }  }\\end{algorithm}MintedIn header: \\usepackage[outputdir=.aux]{minted}  [outputdir=.aux] is the optional argument telling minted where toput the compiled files. Note that this requires to pass the option--output-directory=.aux to be passed.  To compile with minted, you need to pass the argument --shell-escape.When sending conference paper, the CI may not use --shell-escape, to overcome thisissue, follow this. Essentially,you build once the project with --shell-escape and the flag finalizecachein the \\usepackage[finalizecache]{minted}, then the source code to sendshould have the flag frozencache, like this: \\usepackage[frozencache]{minted}MiscellaneousIn the table of content (TOC) if you put a * after the section, it will not be consideredExample:\\section*{Introduction}Introduction will not be in the TOCRotate text :\\usepackage{rotating}\\begin{turn}{90}  Text\\end{turn}Compile with bibliographyTo set the out folder. (Note: If you use mint for algorithms, remember to include\\usepackage[outputdir=.aux]{minted})  pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex-output-directory .aux  biber --output_directory .aux %BeamerElement appears after x : uncover&lt;2-&gt;{YOUR-ELEMENT}For list (enumerate or itemize) : [&lt;+-&gt;] every item appears in a new slideTo put a content in multiple pages \\begin{frame}[allowframebreaks]{Title}Install custom versioncd /tmp                                  # or some other working directorywget https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/20XX/tlnet-final/install-tl-unx.tar.gz # XX is a year versionzcat &lt; install-tl-unx.tar.gz | tar xf -  # See below about the tar archive namecd install-tl-*/                         # Replace with the directory that zcat/tar actually producedsudo mkdir /usr/local/texlivesudo chown $USER /usr/local/texlive      # See below regarding root or group ownership./install-tl -repository ftp://tug.org/historic/systems/texlive/20XX/tlnet-finalFinally, prepend /usr/local/texlive/20XX/bin/x86_64-linux (replacing the yearand platform as appropriate) to your PATHSource: hereSome stats:...Time used for installing the packages: 3:30:34...Welcome to TeX Live!See /usr/local/texlive/2023/index.html for links to documentation.The TeX Live web site (https://tug.org/texlive/) provides all updatesand corrections. TeX Live is a joint project of the TeX user groupsaround the world; please consider supporting it by joining the groupbest for you. The list of groups is available on the webat https://tug.org/usergroups.html.Add /usr/local/texlive/2023/texmf-dist/doc/man to MANPATH.Add /usr/local/texlive/2023/texmf-dist/doc/info to INFOPATH.Most importantly, add /usr/local/texlive/2023/bin/x86_64-linuxto your PATH for current and future sessions.Logfile: /usr/local/texlive/2023/install-tl.log"
   },
   
   {
@@ -73,7 +73,7 @@
     "url": "/about-me/posts/github/",
     "categories": "",
     "tags": "",
-    "date": "2024-12-29 18:16:24 +0100",
+    "date": "2024-12-30 00:04:52 +0100",
     
 
 
@@ -90,7 +90,7 @@
     "url": "/about-me/posts/docker/",
     "categories": "",
     "tags": "",
-    "date": "2024-12-29 18:16:24 +0100",
+    "date": "2024-12-30 00:04:52 +0100",
     
 
 
