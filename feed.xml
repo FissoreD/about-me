@@ -4,7 +4,7 @@
   <id>/about-me/</id>
   <title>Davide Fissore</title>
   <subtitle>FissoreD</subtitle>
-  <updated>2024-11-28T15:04:25+01:00</updated>
+  <updated>2024-12-29T18:16:24+01:00</updated>
   <author>
     <name>Davide Fissore</name>
     <uri>/about-me/</uri>
@@ -22,7 +22,7 @@
   <entry>
     <title>My scripts</title>
     <link href="/about-me/posts/scripts/" rel="alternate" type="text/html" title="My scripts" />
-    <published>2024-11-28T15:04:25+01:00</published>
+    <published>2024-12-29T18:16:24+01:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
@@ -60,7 +60,7 @@ bash language notifying at regular intervals if the batt...</summary>
   <entry>
     <title>Ocaml &amp; Opam</title>
     <link href="/about-me/posts/ocaml/" rel="alternate" type="text/html" title="Ocaml &amp;amp; Opam" />
-    <published>2024-11-28T15:04:25+01:00</published>
+    <published>2024-12-29T18:16:24+01:00</published>
   
     <updated>2024-10-17T16:06:28+02:00</updated>
   
@@ -111,7 +111,7 @@ Main commands...</summary>
   <entry>
     <title>Linux</title>
     <link href="/about-me/posts/linux/" rel="alternate" type="text/html" title="Linux" />
-    <published>2024-11-28T15:04:25+01:00</published>
+    <published>2024-12-29T18:16:24+01:00</published>
   
     <updated>2024-08-12T15:24:55+02:00</updated>
   
@@ -168,9 +168,9 @@ Hints on makefile
   <entry>
     <title>Latex</title>
     <link href="/about-me/posts/latex/" rel="alternate" type="text/html" title="Latex" />
-    <published>2024-11-28T15:04:25+01:00</published>
+    <published>2024-12-29T18:16:24+01:00</published>
   
-    <updated>2024-08-12T15:24:55+02:00</updated>
+    <updated>2024-12-29T18:15:12+01:00</updated>
   
     <id>/about-me/posts/latex/</id>
     <content src="/about-me/posts/latex/" />
@@ -204,7 +204,7 @@ Graphics and images
   <entry>
     <title>Git &amp; Github</title>
     <link href="/about-me/posts/github/" rel="alternate" type="text/html" title="Git &amp;amp; Github" />
-    <published>2024-11-28T15:04:25+01:00</published>
+    <published>2024-12-29T18:16:24+01:00</published>
   
     <updated>2024-11-05T14:27:20+01:00</updated>
   
