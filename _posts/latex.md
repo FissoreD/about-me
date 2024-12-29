@@ -173,3 +173,41 @@ To put a content in multiple pages
 ```tex
  \begin{frame}[allowframebreaks]{Title}
 ```
+
+## Install custom version
+```bash
+cd /tmp                                  # or some other working directory
+wget https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/20XX/tlnet-final/install-tl-unx.tar.gz # XX is a year version
+zcat < install-tl-unx.tar.gz | tar xf -  # See below about the tar archive name
+cd install-tl-*/                         # Replace with the directory that zcat/tar actually produced
+sudo mkdir /usr/local/texlive
+sudo chown $USER /usr/local/texlive      # See below regarding root or group ownership
+./install-tl -repository ftp://tug.org/historic/systems/texlive/20XX/tlnet-final
+```
+
+Finally, prepend `/usr/local/texlive/20XX/bin/x86_64-linux` (replacing the year
+and platform as appropriate) to your `PATH`
+
+Source: [here](https://tex.stackexchange.com/questions/688544/seeking-step-by-step-instructions-to-install-an-old-version-of-tex-live)
+
+Some stats:
+```
+...
+Time used for installing the packages: 3:30:34
+...
+Welcome to TeX Live!
+See /usr/local/texlive/2023/index.html for links to documentation.
+
+The TeX Live web site (https://tug.org/texlive/) provides all updates
+and corrections. TeX Live is a joint project of the TeX user groups
+around the world; please consider supporting it by joining the group
+best for you. The list of groups is available on the web
+at https://tug.org/usergroups.html.
+
+Add /usr/local/texlive/2023/texmf-dist/doc/man to MANPATH.
+Add /usr/local/texlive/2023/texmf-dist/doc/info to INFOPATH.
+Most importantly, add /usr/local/texlive/2023/bin/x86_64-linux
+to your PATH for current and future sessions.
+
+Logfile: /usr/local/texlive/2023/install-tl.log
+```
