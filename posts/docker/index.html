@@ -40,12 +40,12 @@
 <meta property="og:site_name" content="Davide Fissore" />
 <meta property="og:image" content="/about-me/assets/img/logo_docker.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-02-24T14:16:59+01:00" />
+<meta property="article:published_time" content="2025-02-25T18:36:10+01:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="/about-me/assets/img/logo_docker.png" />
 <meta property="twitter:title" content="Docker" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-12T15:24:55+02:00","datePublished":"2025-02-24T14:16:59+01:00","description":"About","headline":"Docker","image":"/about-me/assets/img/logo_docker.png","mainEntityOfPage":{"@type":"WebPage","@id":"/about-me/posts/docker/"},"url":"/about-me/posts/docker/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-25T18:34:49+01:00","datePublished":"2025-02-25T18:36:10+01:00","description":"About","headline":"Docker","image":"/about-me/assets/img/logo_docker.png","mainEntityOfPage":{"@type":"WebPage","@id":"/about-me/posts/docker/"},"url":"/about-me/posts/docker/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -721,13 +721,13 @@
 
 <time
   
-  data-ts="1723469095"
+  data-ts="1740504889"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Aug 12, 2024
+  Feb 25, 2025
 </time>
 
         </span>
@@ -783,7 +783,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="264 words"
+  title="318 words"
 >
   <em>1 min</em> read</span>
 
@@ -834,13 +834,34 @@ environments in isolation.</p>
       <td><code class="language-plaintext highlighter-rouge">docker run -i -t IMAGE_ID /bin/bash</code></td>
     </tr>
     <tr>
-      <td>Copy file into container</td>
+      <td>Copy from host to container</td>
       <td><code class="language-plaintext highlighter-rouge">docker cp PATH1 DOCKER_CONTAINER:PATH2</code></td>
+    </tr>
+    <tr>
+      <td>Copy from container to host</td>
+      <td><code class="language-plaintext highlighter-rouge">docker cp DOCKER_CONTAINER:PATH2 PATH1</code></td>
+    </tr>
+    <tr>
+      <td>Remove all containers</td>
+      <td><code class="language-plaintext highlighter-rouge">docker rm -v -f $(docker ps -qa)</code></td>
+    </tr>
+    <tr>
+      <td>Container creation</td>
+      <td><code class="language-plaintext highlighter-rouge">docker create --name CNT_NAME IMG_NAME</code></td>
+    </tr>
+    <tr>
+      <td>Container start</td>
+      <td><code class="language-plaintext highlighter-rouge">docker start CNT_NAME</code></td>
     </tr>
   </tbody>
 </table></div>
 
-<h2 id="installation"><span class="me-2">Installation</span><a href="#installation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CMD</code> is a command that will be executed once the container is run</li>
+  <li><code class="language-plaintext highlighter-rouge">ENTRYPOINT</code> is the list arguments passed to CMD</li>
+</ul>
+
+<h2 id="docker-installation"><span class="me-2">Docker Installation</span><a href="#docker-installation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <div class="language-bash highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -925,6 +946,7 @@ environments in isolation.</p>
 <span class="k">WORKDIR</span><span class="s"> /data</span>
 <span class="k">VOLUME</span><span class="s"> ["/data"]</span>
 </pre></td></tr></tbody></table></code></div></div>
+
 
   </div>
 

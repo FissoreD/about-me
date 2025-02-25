@@ -5,7 +5,7 @@
     "url": "/about-me/posts/scripts/",
     "categories": "",
     "tags": "",
-    "date": "2025-02-24 14:16:59 +0100",
+    "date": "2025-02-25 18:36:10 +0100",
     
 
 
@@ -22,7 +22,7 @@
     "url": "/about-me/posts/ocaml/",
     "categories": "",
     "tags": "",
-    "date": "2025-02-24 14:16:59 +0100",
+    "date": "2025-02-25 18:36:10 +0100",
     
 
 
@@ -39,7 +39,7 @@
     "url": "/about-me/posts/linux/",
     "categories": "",
     "tags": "",
-    "date": "2025-02-24 14:16:59 +0100",
+    "date": "2025-02-25 18:36:10 +0100",
     
 
 
@@ -56,7 +56,7 @@
     "url": "/about-me/posts/latex/",
     "categories": "",
     "tags": "",
-    "date": "2025-02-24 14:16:59 +0100",
+    "date": "2025-02-25 18:36:10 +0100",
     
 
 
@@ -73,7 +73,7 @@
     "url": "/about-me/posts/github/",
     "categories": "",
     "tags": "",
-    "date": "2025-02-24 14:16:59 +0100",
+    "date": "2025-02-25 18:36:10 +0100",
     
 
 
@@ -90,7 +90,7 @@
     "url": "/about-me/posts/docker/",
     "categories": "",
     "tags": "",
-    "date": "2025-02-24 14:16:59 +0100",
+    "date": "2025-02-25 18:36:10 +0100",
     
 
 
@@ -99,7 +99,7 @@
 
     
     "snippet": "About  Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation.Source: Wi...",
-    "content": "About  Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation.Source: WikipediaUseful commands  All commands should be run in root mode  Note: A Docker image creates containers to run on the Docker platform.            Description      Command                  Install dockerfile      docker build -t IMAGE_NAME .              List images      docker images              Run image with bash      docker run -i -t IMAGE_ID /bin/bash              Copy file into container      docker cp PATH1 DOCKER_CONTAINER:PATH2      Installation# Uninstall conflicting packagesfor pkg in docker.io docker-doc docker-compose docker-compose-v2 \\  podman-docker containerd runc; do sudo apt-get remove $pkg; done# Add Docker's official GPG key:sudo apt-get updatesudo apt-get install ca-certificates curlsudo install -m 0755 -d /etc/apt/keyringssudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.ascsudo chmod a+r /etc/apt/keyrings/docker.asc# Add the repository to Apt sources:echo \\  \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \\  $(. /etc/os-release &amp;&amp; echo \"$VERSION_CODENAME\") stable\" | \\  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/nullsudo apt-get update# Install latest versionsudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin# Verify that docker installation is successfulsudo docker run hello-worldSource: hereDockerfile exampleDockerfile example of full latex installation:FROM ubuntu:xenialENV DEBIAN_FRONTEND noninteractiveRUN apt-get update -q &amp;&amp; apt-get install -qy \\    texlive-full \\    python-pygments gnuplot \\    make git \\    &amp;&amp; rm -rf /var/lib/apt/lists/*WORKDIR /dataVOLUME [\"/data\"]"
+    "content": "About  Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation.Source: WikipediaUseful commands  All commands should be run in root mode  Note: A Docker image creates containers to run on the Docker platform.            Description      Command                  Install dockerfile      docker build -t IMAGE_NAME .              List images      docker images              Run image with bash      docker run -i -t IMAGE_ID /bin/bash              Copy from host to container      docker cp PATH1 DOCKER_CONTAINER:PATH2              Copy from container to host      docker cp DOCKER_CONTAINER:PATH2 PATH1              Remove all containers      docker rm -v -f $(docker ps -qa)              Container creation      docker create --name CNT_NAME IMG_NAME              Container start      docker start CNT_NAME        CMD is a command that will be executed once the container is run  ENTRYPOINT is the list arguments passed to CMDDocker Installation# Uninstall conflicting packagesfor pkg in docker.io docker-doc docker-compose docker-compose-v2 \\  podman-docker containerd runc; do sudo apt-get remove $pkg; done# Add Docker's official GPG key:sudo apt-get updatesudo apt-get install ca-certificates curlsudo install -m 0755 -d /etc/apt/keyringssudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.ascsudo chmod a+r /etc/apt/keyrings/docker.asc# Add the repository to Apt sources:echo \\  \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \\  $(. /etc/os-release &amp;&amp; echo \"$VERSION_CODENAME\") stable\" | \\  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/nullsudo apt-get update# Install latest versionsudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin# Verify that docker installation is successfulsudo docker run hello-worldSource: hereDockerfile exampleDockerfile example of full latex installation:FROM ubuntu:xenialENV DEBIAN_FRONTEND noninteractiveRUN apt-get update -q &amp;&amp; apt-get install -qy \\    texlive-full \\    python-pygments gnuplot \\    make git \\    &amp;&amp; rm -rf /var/lib/apt/lists/*WORKDIR /dataVOLUME [\"/data\"]"
   }
   
 ]
