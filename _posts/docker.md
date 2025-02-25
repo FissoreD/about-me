@@ -19,15 +19,22 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
 
 > Note: A Docker image creates containers to run on the Docker platform.
 
-| Description              | Command                                  |
-| ------------------------ | ---------------------------------------- |
-| Install dockerfile       | `docker build -t IMAGE_NAME .`           |
-| List images              | `docker images`                          |
-| Run image with bash      | `docker run -i -t IMAGE_ID /bin/bash`    |
-| Copy file into container | `docker cp PATH1 DOCKER_CONTAINER:PATH2` |
+| Description                 | Command                                  |
+| --------------------------- | ---------------------------------------- |
+| Install dockerfile          | `docker build -t IMAGE_NAME .`           |
+| List images                 | `docker images`                          |
+| Run image with bash         | `docker run -i -t IMAGE_ID /bin/bash`    |
+| Copy from host to container | `docker cp PATH1 DOCKER_CONTAINER:PATH2` |
+| Copy from container to host | `docker cp DOCKER_CONTAINER:PATH2 PATH1` |
+| Remove all containers       | `docker rm -v -f $(docker ps -qa)`       |
+| Container creation          | `docker create --name CNT_NAME IMG_NAME` |
+| Container start             | `docker start CNT_NAME`                  |
+
+- `CMD` is a command that will be executed once the container is run
+- `ENTRYPOINT` is the list arguments passed to CMD
 
 
-## Installation
+## Docker Installation
 
 ```bash
 # Uninstall conflicting packages
@@ -75,3 +82,4 @@ RUN apt-get update -q && apt-get install -qy \
 WORKDIR /data
 VOLUME ["/data"]
 ```
+
