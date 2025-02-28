@@ -6,23 +6,24 @@ image:
 
 ## Main commands
 
-| Description                   | Command                                    |
-| ----------------------------- | ------------------------------------------ |
-| Clean brute force             | `git clean -dfx`                           |
-| All branch names              | `git show-ref`                             |
-| Add worktree                  | `git worktree add PATH EXISTING_BRANCH`    |
-| Add worktree new branch       | `git worktree add -b NEW_BRANCH_NAME PATH` |
-| Fetch all                     | `git fetch --all`                          |
-| Show remote list              | `git remote show`                          |
-| Show remote url               | `git remote -v`                            |
-| Rename remote                 | `git remote rename OLD_NAME NEW_NAME`      |
-| Remove branch locally         | `git branch -d BRANCH_NAME`                |
-| Remove branch globally        | `git branch --delete BRANCH_NAME`          |
-| Stash selected files          | `git stash -- file names`                  |
-| Stash only unstaged files     | `git stash push --keep-index`              |
-| Undo last local commit        | `git reset HEAD~`                          |
-| Add remote repo               | `git remote add NEW_NAME GITHUB_URL`       |
-| Set remote url                | [See this video](https://www.youtube.com/watch?v=ePCBuIQJAUc) |
+| Description               | Command                                                       |
+| ------------------------- | ------------------------------------------------------------- |
+| Clean brute force         | `git clean -dfx`                                              |
+| All branch names          | `git show-ref`                                                |
+| Add worktree              | `git worktree add PATH EXISTING_BRANCH`                       |
+| Add worktree new branch   | `git worktree add -b NEW_BRANCH_NAME PATH`                    |
+| Fetch all                 | `git fetch --all`                                             |
+| Show remote list          | `git remote show`                                             |
+| Show remote url           | `git remote -v`                                               |
+| Rename remote             | `git remote rename OLD_NAME NEW_NAME`                         |
+| Remove branch locally     | `git branch -d BRANCH_NAME`                                   |
+| Remove branch globally    | `git branch --delete BRANCH_NAME`                             |
+| Stash selected files      | `git stash -- file names`                                     |
+| Stash only unstaged files | `git stash push --keep-index`                                 |
+| Undo last local commit    | `git reset HEAD~`                                             |
+| Add remote repo           | `git remote add NEW_NAME GITHUB_URL`                          |
+| Push-pull conflict        | `git pull --rebase`                                           |
+| Set remote url            | [See this video](https://www.youtube.com/watch?v=ePCBuIQJAUc) |
 
 ## Git pre-commit
 
