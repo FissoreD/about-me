@@ -28,7 +28,7 @@ alias gitstashpullpop="git stash && git pull && git stash pop"
 alias github="cd ~/Documents/github"
 alias resize-hdm1="xrandr --output HDMI-1 --mode 2560x1440"
 
-alias opam-enter="eval \$(opam env --set-switch)"
+alias opam-enter="eval \$(opam env --switch=. --set-switch)"
 
 function work_monitor_setting(){
    xrandr --output DP-1-1 --mode 2560x1440 &&
