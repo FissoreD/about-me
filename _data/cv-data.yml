@@ -222,13 +222,30 @@ publications:
   title: Publications
   # intro: |
   papers:
+    - title: Determinacy Checking for Elpi
+      link: "https://inria.hal.science/hal-05026472v2"
+      authors: "`Davide Fissore`, Enrico Tassi"
+      year: "2026"
+      conference: "PADL'26"
+      hal_id: "978-3-032-15981-6_5"
+      address: "Rennes, France"
+
+    - title: Cryptarithmetic Playtime
+      link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11272639"
+      authors: "Arnaud Malapert, Marie Pelleau, Margaux Schmied, `Davide Fissore`"
+      year: "2025"
+      conference: "ICTAI'25"
+      hal_id: "ICTAI66417.2025.00009"
+      address: "Rennes, France"
+
+
     - title: Higher-Order unification for free!
       link: "https://inria.hal.science/hal-04547069v2"
       authors: "`Davide Fissore`, Enrico Tassi"
       year: "2024"
       conference: "PPDP'24"
-      hal_id: "hal-04547069"
-      address: "Milan, Italy"
+      hal_id: "3678232.3678233"
+      address: "Athens, Greece"
 
     - title: A new Type-Class solver for Coq in Elpi
       link: "https://inria.hal.science/hal-04467855"

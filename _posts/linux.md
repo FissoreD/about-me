@@ -144,3 +144,9 @@ echo -e "\nexport LC_TIME=\"en_IE.utf8\"" >> $HOME/.profile
 ```
 
 > `en_IE.utf8` is for _English, Ireland_
+
+Set local paper size:
+
+```bash
+echo -e "\nexport LC_PAPER=\"en_GB.UTF-8\"" >> $HOME/.profile
+```
